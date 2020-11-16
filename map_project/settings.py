@@ -37,9 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
+    'django.shortcuts',
     'rest_framework',
     'rest_framework.authtoken',
-    'djmaps',
+    'djmaps'
 ]
 
 MIDDLEWARE = [
@@ -78,8 +80,20 @@ WSGI_APPLICATION = 'map_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        # 'NAME': 'postgres',
+        # 'USER': 'postgres',
+        # 'PASSWORD': 'postgres',
+        # 'HOST': 'localhost',
+        # 'PORT': '5432',
+        'NAME': 'idsd',
+        'USER': 'redbit',
+        'PASSWORD': 'minletmein01!',
+        'HOST': 'anoa.redbit.co.id',
+        'PORT': '5432',
     }
 }
 
